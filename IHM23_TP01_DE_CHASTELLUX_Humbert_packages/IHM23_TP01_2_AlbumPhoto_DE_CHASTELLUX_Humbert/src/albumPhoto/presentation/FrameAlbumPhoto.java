@@ -60,6 +60,9 @@ public class FrameAlbumPhoto extends JFrame {
 		leftnorthJPanel.add(left_first_Button);
 		leftnorthJPanel.add(left_back_Button);
 
+		left_first_Button.setEnabled(false);
+		left_back_Button.setEnabled(false);
+
 		northPanel.add(leftnorthJPanel);
 		northPanel.add(title);
 
@@ -78,6 +81,15 @@ public class FrameAlbumPhoto extends JFrame {
 	}
 
 	private void buildMenu() {
+		JMenuBar menuBar = new JMenuBar();
+		JMenu menu = new JMenu("Fichier");
+		JMenuItem item = new JMenuItem("Ajouter une image");
+		JMenuItem item2 = new JMenuItem("Quitter");
+		menu.add(item);
+		menu.addSeparator();
+		menu.add(item2);
+		menuBar.add(menu);
+		this.setJMenuBar(menuBar);	
 
 	}
 
