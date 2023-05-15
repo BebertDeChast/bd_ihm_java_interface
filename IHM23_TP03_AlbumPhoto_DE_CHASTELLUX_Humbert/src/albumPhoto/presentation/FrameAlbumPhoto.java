@@ -219,7 +219,7 @@ public class FrameAlbumPhoto extends JFrame {
 
 	public void buildSouthPanel() {
 		this.southPanel = new JPanel();
-		southPanel.setLayout(new BoxLayout(southPanel, BoxLayout.X_AXIS));
+		southPanel.setLayout(new FlowLayout());
 
 		for (int i = 0; i < this.model.getSize(); i++) {
 			JLabel label = new JLabel(this.model.getPhoto(i).getIcon());
